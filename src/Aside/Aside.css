@@ -1,0 +1,148 @@
+@import '../variables.css';
+
+.aside {
+  list-style: none;
+  background-color: var(--blue);
+  padding: 1.5rem 1rem;
+}
+
+.aside>ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.aside ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.3vh;
+  transition: color 0.2s ease;
+  transition: font-size 0.2s ease;
+  transition: font-weight 0.2s ease;
+}
+
+.aside-dropdown{
+  font-size: 2.3vh;
+} 
+
+.aside ul a:hover {
+  color: var(--orange);
+  font-size: 2.3vh;
+  font-weight: bold;
+}
+
+.aside li:first-letter {
+  text-transform: uppercase;
+}
+
+.aside-category {
+  list-style: none;
+}
+
+.aside ul li li {
+  margin-left: 0.3rem;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.aside ul li li a {
+  font-size: 1.1rem;
+}
+
+.aside ul li li .active {
+    color: var(--orange);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.aside-category .active {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 2.3vh;
+}
+
+@media screen and (max-width: 75rem) {
+
+  .aside-login {
+    height: 2rem;
+    width: 5rem;
+    align-items: center;
+  }
+  .aside-dropdown {
+    background-color: #ddd;
+    display: block;
+    position: relative;
+    top: 1rem;
+    width: 10rem;
+    overflow: auto;
+  }
+  li.aside-dropdown a {
+    color: blue;
+  }
+  .aside-dropdown a {
+    display: block;
+    color: #000000;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+/* ++++++++++++++++++++++++++++++ */
+  .aside {
+    padding: 1rem;
+  }
+
+  .aside>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .aside ul a {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (max-width: 35rem) {
+
+  .aside {
+    padding: 1rem;
+  }
+
+  .aside ul{
+    gap: 0.5rem;
+  }
+
+  .aside ul a {
+    font-size:0.95rem;
+  }
+
+  .aside ul a:hover {
+    font-size: 1.00rem;
+  }
+
+  .aside ul li li {
+    margin-left: 0.5rem;
+    padding: 0.15rem;
+  }
+
+  .aside ul li li a {
+    font-size: 0.8rem;
+  }
+
+  .aside ul li li .active {
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 1rem;
+  }
+
+}
+
+
+
+
+

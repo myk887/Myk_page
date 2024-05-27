@@ -1,0 +1,147 @@
+@import 'normalize.css';
+@import 'variables.css';
+
+.header {
+  grid-area: header;
+  padding: 0.8rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 20rem;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+.header-logo-image {
+  height: 8rem;
+}
+
+.search input{
+  font-size:1.2rem;
+  height: 2.2rem;
+}
+
+.login-perfil {
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 75rem) {
+
+  .header {
+    grid-area: header;
+    padding: 0.5rem 2rem ;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    grid-template-rows: 6rem 2rem;
+    grid-template-areas:
+      'header-logo-image    header-login'
+      'header-search        header-login'
+  }
+
+  .header-logo-image {
+    grid-area: header-logo-image;
+    height: 5.5rem;
+  }
+
+  .search {
+    grid-area: header-search;
+  }
+
+  .login-perfil {
+    grid-area: header-login;
+    margin: auto auto;
+  }
+}
+
+@media screen and (max-width: 35rem) {
+
+  .header{
+    padding: 0.5rem;
+    gap: 0.8rem;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: 6rem 2rem;
+  }
+
+  .header-logo-image {
+    grid-area: header-logo-image;
+    height: 5rem;
+  }
+
+  .login-perfil {
+    flex-direction: column;
+  }
+
+  .login-avatar-image {
+    height: 4.2rem;
+    border-radius: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .login-buttonUsername {
+    max-width: 6rem;
+    margin: 0.5rem;
+    background: white;
+    color: var(--blue);
+    font-size: 0.8rem;
+    min-height: 1.5rem;
+  }
+
+  .search {
+   padding-bottom: 0.5rem;
+  }
+
+  .search input{
+    font-size:1rem;
+    height: 2rem;
+    width: 15rem;
+  }
+
+}
+
+@media screen and (min-width: 140rem) {
+  .header {
+    padding: 0.8rem 2rem 1rem 2rem;
+    gap: 2rem;
+    min-width: 20rem;
+    position: fixed;
+  }
+  .header-logo-image {
+    height: 9rem;
+  }
+
+  .search input{
+    font-size:2rem;
+    height: 4rem;
+  }
+
+  .login-perfil {
+    margin-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 220rem) {
+  .header {
+    padding: 0.8rem 2rem 2rem 2rem;
+    gap: 2rem;
+    min-width: 20rem;
+    position: fixed;
+  }
+  .header-logo-image {
+    height: 20rem;
+  }
+
+  .search input{
+    font-size:5rem;
+    height: 7rem;
+  }
+
+  .login-perfil {
+    margin-right: 5rem;
+  }
+}

@@ -1,0 +1,309 @@
+
+@import '../variables.css';
+@import '../normalize.css';
+
+
+.banners {
+  display:grid;
+  place-items: center;
+  margin: 0 10px;
+}
+
+.banners-image {
+    width:70%;
+}
+
+.introductionpage-carousel-block {
+  padding: 1.5rem 0;
+}
+
+.introductionpage-title {
+  color:var(--dark-grey);
+  font-size: 1.7rem;
+  padding: 0.5vw 5vw;
+}
+
+.introductionpage-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 1vw;
+}
+
+.introductionpage-container {
+  border: 1px solid lightgray;
+  border-radius: 0.5vw;
+  height: 95%;
+  min-height: 23rem;
+  width: 23rem;
+  padding: 0.3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
+  transition: border 0.1s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.introductionpage-container:hover {
+  transform: scale(1.05);
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--blue-transparent);
+  box-shadow: 7px 10px var(--shadows-grey);
+}
+
+.introductionpage-photos {
+  height: 70%;
+  margin: 0.5vW auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.introductionpage-productinfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.introductionpage-names {
+  color: black;
+  margin: 5% 1rem;
+  max-width: 45%;
+}
+
+.introductionpage-prices {
+  color: black;
+  margin: 5% 1rem;
+  font-style: bold;
+  font-size: 1.6rem;
+}
+
+.ip-arrow2 {
+  order: 1;
+}
+
+.introductionpage-container a {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.introductionpage-arrow {
+  font-size: 4vw;
+  margin: auto 0;
+  color: var(--arrow-grey-transparent);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.introductionpage-arrow:hover {
+  transform: scale(1.2);
+  color: var(--arrow-grey);
+}
+
+/* Comportamiento para zooms landscape muy alejados */
+
+@media screen and (min-width: 75rem) {
+
+  .introductionpage-container {
+    width: 25rem;
+  }
+}
+
+@media screen and (min-width: 150rem) {
+
+  .introductionpage-title {
+    font-size: 2.5rem;
+  }
+
+  .introductionpage-container {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .introductionpage-names {
+    margin: 5% 1rem;
+    max-width: 45%;
+    font-size: 2rem;
+  }
+
+  .introductionpage-prices {
+    margin: 5% 1rem;
+    font-style: bold;
+    font-size: 3rem;
+  }
+
+  .introductionpage-arrow {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 250rem) {
+
+  .introductionpage-title {
+    font-size: 3.5rem;
+  }
+
+  .introductionpage-container {
+    width: 50rem;
+    height: 55rem;
+  }
+
+  .introductionpage-names {
+    margin: 5% 1rem;
+    max-width: 45%;
+    font-size: 3rem;
+  }
+
+  .introductionpage-prices {
+    margin: 5% 1rem;
+    font-style: bold;
+    font-size: 4rem;
+  }
+
+  .introductionpage-arrow {
+    font-size: 2vw;
+  }
+}
+
+/* Comportamiento para dispositivos móviles*/
+
+@media screen and (max-width: 103rem) {
+
+  .banners-image {
+    width:95%;
+    margin-top: 0.5rem;
+  }
+
+  .introductionpage-carousel-block {
+    padding: 0.5rem 0;
+  }
+
+  .introductionpage-title {
+    font-size: 1.5rem;
+    padding: 0.1vw 5vw;
+  }
+
+  .introductionpage-container {
+    min-height: 17rem;
+    width: 17rem;
+    padding: 0.2vw;
+  }
+
+  .introductionpage-productinfo {
+    gap: 0.1rem;
+  }
+
+  .introductionpage-names {
+    margin: 2% 1rem;
+    font-size: 1rem;
+  }
+
+  .introductionpage-prices {
+    margin: 2% 1rem;
+    font-size: 1.1rem;
+  }
+
+  .introductionpage-arrow {
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (max-width: 75rem) {
+
+  .banners-image {
+    width:95%;
+    margin-top: 0.5rem;;
+  }
+
+  .introductionpage-carousel-block {
+    padding: 0.5rem 0;
+  }
+
+  .introductionpage-title {
+    font-size: 1.2rem;
+    padding: 0.1vw 5vw;
+  }
+
+  .introductionpage-banner {
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+
+  .introductionpage-container {
+    min-height: 13rem;
+    width: 13rem;
+    padding: 0.2vw;
+  }
+
+  .introductionpage-productinfo {
+    gap: 0.1rem;
+  }
+
+  .introductionpage-names {
+    margin: 2% 1rem;
+    font-size: 0.8rem;
+    max-width: 45%;
+  }
+
+  .introductionpage-prices {
+    margin: 2% 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .introductionpage-arrow {
+    font-size: 2.5vw;
+  }
+
+}
+
+@media screen and (max-width: 45rem) {
+
+  .banners-image {
+    width:95%;
+    margin-top: 0.5rem;;
+  }
+
+  .introductionpage-carousel-block {
+    padding: 0.5rem 0;
+  }
+
+  .introductionpage-title {
+    color:var(--dark-grey);
+    font-size: 1rem;
+    padding: 0 7vw;
+  }
+
+  .introductionpage-banner {
+    display:block;
+  }
+
+  .introductionpage-container {
+    min-height: 0;
+    height: 18rem;
+    width: 85vw;
+    margin: 1rem 0;
+  }
+
+  .introductionpage-photos {
+    height: 70%;
+    margin: 1rem auto;
+  }
+
+  .introductionpage-names {
+    margin: 2% 1rem;
+    font-size: 1rem;
+  }
+
+  .introductionpage-prices {
+    margin: 2% 1rem;
+    font-size: 1.2rem;
+  }
+
+  .ip-arrow2 {
+    order: 0;
+  }
+
+}
+
